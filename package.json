@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "fastapi": "uvicorn back.main:app --reload --log-level debug",
+    "vue": "cd front && npm run dev",
+    "dev": "concurrently --names \"API,WEB\" --prefix-colors \"bgBlue.bold,bgMagenta.bold\" \"npm run fastapi\" \"npm run vue\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
